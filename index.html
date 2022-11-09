@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #res{
+                color:green;
+            }
+            #opres{
+                color:red;
+            }
+        </style>
+        <script>
+            function age(){
+                var age;
+                age=Number(document.getElementById("age").value);
+                if (age>=18){
+                    document.getElementById("res").innerHTML="Eligible for Voting"; 
+                }
+                else{
+                    document.getElementById("opres").innerHTML="Not Eligible for Voting";
+
+                }
+            }
+        </script>
+        
+    </head>
+    <body>
+        <h1>Enter age : </h1><input type="text" id="age"><br>
+        <button type="button" onclick="age()">Submit</button>
+        <div id="res" class="alert success"></div>
+        <div id="opres"></div>
+    </body>
+</html>
